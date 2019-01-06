@@ -10,6 +10,10 @@
     </head>
     <body onresize="redimensionarJanela()">
 
-        <script>posicaoRandomica();</script>
+        <script>
+            setInterval(function(){
+                posicaoRandomica();
+            }, 1000);
+        </script>
     </body>
 </html>

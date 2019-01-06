@@ -18,10 +18,16 @@ function posicaoRandomica(){
 
     // console.log(posicaoY, posicaoX);
 
+    //remover o mosquito caso exista
+    if(document.getElementById('mosquito')){
+        document.getElementById('mosquito').remove();
+    }
+
     // html
     var mosquito = document.createElement('img');
         mosquito.src = 'img/mosca.png';
         mosquito.className = tamanhoAleatorio() +' '+ ladoAleatorio();
+        mosquito.id = 'mosquito';
         mosquito.style.position = 'absolute';
         mosquito.style.left = posicaoX + 'px';
         mosquito.style.top = posicaoY + 'px';
