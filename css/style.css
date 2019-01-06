@@ -1,3 +1,40 @@
+body{
+    background: url('../img/bg.jpg') no-repeat;
+    font-family: 'Trebuchet MS';
+/* background-size: cover; */
+}
+
+
+
+        /* edições painel */
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: center;
+}
+.vidas{
+    float: left;
+    /* border: 1px solid red; */
+    display: block;
+    width: 186px;
+}
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    width: 186px;
+}
+
+
+
+        /* edições da mosca */
 .mosca1{
     width: 50px;
     height: 50px;
