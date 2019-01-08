@@ -1,5 +1,6 @@
 var altura = 0;
 var largura = 0;
+var vidas = 1;
 
 function redimensionarJanela(){
     altura = (window.innerHeight - 100);
@@ -21,6 +22,13 @@ function posicaoRandomica(){
     //remover o mosquito caso exista
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove();
+
+        if(vidas <= 3){
+            document.getElementById('v'+ vidas).src = 'img/coracao_vazio.png';
+            vidas ++;
+        }else{
+            alert('game over');
+        }
     }
 
     // html
@@ -31,6 +39,9 @@ function posicaoRandomica(){
         mosquito.style.position = 'absolute';
         mosquito.style.left = posicaoX + 'px';
         mosquito.style.top = posicaoY + 'px';
+        mosquito.onclick = function(){
+            this.remove();
+        }
     document.body.appendChild(mosquito);
 
 }

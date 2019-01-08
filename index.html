@@ -11,9 +11,9 @@
     <body onresize="redimensionarJanela()">
         <div class="painel">
             <div class="vidas">
-                <img src="img/coracao_cheio.png" alt="vida" />
-                <img src="img/coracao_cheio.png" alt="vida" />
-                <img src="img/coracao_vazio.png" alt="vida" />
+                <img src="img/coracao_cheio.png" alt="vida" id="v1" />
+                <img src="img/coracao_cheio.png" alt="vida" id="v2" />
+                <img src="img/coracao_cheio.png" alt="vida" id="v3" />
             </div>
             <div class="cronometro">
                 <p>Tempo de vida: ?</p>
@@ -23,7 +23,7 @@
         <script>
             setInterval(function(){
                 posicaoRandomica();
-            }, 1000);
+            }, 2000);
         </script>
     </body>
 </html>
