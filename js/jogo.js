@@ -1,6 +1,7 @@
 var altura = 0;
 var largura = 0;
 var vidas = 1;
+var tempo = 15;
 
 function redimensionarJanela(){
     altura = (window.innerHeight - 100);
@@ -9,6 +10,17 @@ function redimensionarJanela(){
     // console.log(altura,largura);
 }
 redimensionarJanela();
+
+cronometro = setInterval(function(){
+    tempo --;
+    if(tempo < 0){
+        clearInterval(cronometro);
+        clearInterval(criaMosca);
+        alert('Vitória');
+    }else{
+        document.getElementById('cronometro').innerHTML = tempo;
+    }
+}, 1000);
 
 function posicaoRandomica(){
     var posicaoY = Math.floor(Math.random() * altura);
