@@ -3,6 +3,19 @@ var largura = 0;
 var vidas = 1;
 var tempo = 15;
 
+var criaMoscaTempo = 1500;
+
+var nivel = window.location.search;
+nivel = nivel.replace('?', '');
+
+if(nivel == 'normal'){
+    criaMoscaTempo = 1500;
+}else if(nivel == 'dificil'){
+    criaMoscaTempo = 1000;
+}else if(nivel == 'chickNorris'){
+    criaMoscaTempo = 750;
+}
+
 function redimensionarJanela(){
     altura = (window.innerHeight - 100);
     largura = (window.innerWidth - 100);
@@ -20,7 +33,7 @@ cronometro = setInterval(function(){
     }else{
         document.getElementById('cronometro').innerHTML = tempo;
     }
-}, 1000);
+}, criaMoscaTempo);
 
 function posicaoRandomica(){
     var posicaoY = Math.floor(Math.random() * altura);
